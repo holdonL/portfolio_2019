@@ -1,3 +1,54 @@
+.menu-button {
+  position: absolute;
+  right: 35px;
+  top: 35px;
+  z-index: 3;
+  cursor: pointer;
+  -webkit-transition: all ease-out 0.8s;
+  transition: all ease-out 0.8s;
+}
+
+.menu-button .menu-button--line {
+  width: 28px;
+  height: 3px;
+  margin: 0 0 5px 0;
+  -webkit-transition: all ease-out 0.8s;
+  transition: all ease-out 0.8s;
+  background: #fff;
+}
+
+.menu-button .menu-button--line:nth-child(3) {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.menu-button.close {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: all ease-out 0.5s;
+  transition: all ease-out 0.5s;
+}
+
+.menu-button.close .menu-button--line:nth-child(1) {
+  -webkit-transform: rotate(45deg) translate(5px, 5px);
+          transform: rotate(45deg) translate(5px, 5px);
+  -webkit-transition: all ease-out 0.5s;
+  transition: all ease-out 0.5s;
+}
+
+.menu-button.close .menu-button--line:nth-child(2) {
+  opacity: 0;
+  -webkit-transition: all ease-out 0.5s;
+  transition: all ease-out 0.5s;
+}
+
+.menu-button.close .menu-button--line:nth-child(3) {
+  -webkit-transform: rotate(-45deg) translate(7px, -6px);
+          transform: rotate(-45deg) translate(7px, -6px);
+  -webkit-transition: all ease-out 0.5s;
+  transition: all ease-out 0.5s;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -68,11 +119,6 @@ main {
   height: 100%;
 }
 
-main#home {
-  overflow: hidden;
-  margin-top: 20vh;
-}
-
 main .icons {
   margin-top: 1rem;
 }
@@ -83,7 +129,15 @@ main .icons a {
 
 main .icons a:hover {
   color: #e6e203;
-  -webkit-transition: color ease-out 0.8s;
-  transition: color ease-out 0.8s;
+  -webkit-transition: all ease-out 0.8s;
+  transition: all ease-out 0.8s;
+}
+
+main#home {
+  overflow: hidden;
+}
+
+main#home h1 {
+  margin-top: 20vh;
 }
 /*# sourceMappingURL=main.css.map */

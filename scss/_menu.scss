@@ -1,0 +1,45 @@
+.menu-button {
+    position: absolute;
+    right: 35px;
+    top: 35px;
+    z-index: 3;
+    cursor: pointer;
+    @include ease0ut;
+
+    .menu-button--line {
+        width: 28px;
+        height: 3px;
+        margin: 0 0 5px 0;
+        @include ease0ut;
+        background: #fff;
+
+        &:nth-child(3) {
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    //Rotate into X with menu lines
+    &.close {
+        transform: rotate(180deg);
+        transition: all ease-out 0.5s;
+
+        .menu-button--line {
+            //Line 1
+            &:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+                transition: all ease-out 0.5s;
+            }
+            //Line 2
+            &:nth-child(2) {
+               opacity: 0;
+               transition: all ease-out 0.5s;
+            }
+            //Line 3
+            &:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
+                transition: all ease-out 0.5s;
+        }
+    }
+}
+}

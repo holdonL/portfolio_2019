@@ -7,7 +7,7 @@ $background-opacity: 0.9;
 
 //Mixins
 @mixin ease0ut {
-    transition: color ease-out 0.8s;
+    transition: all ease-out 0.8s;
 }
 @mixin background {
     @if $show-home-image {
