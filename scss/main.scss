@@ -1,7 +1,71 @@
-h1 {
-    color: orange;
+@import "config";
+
+
+* {
+    box-sizing: border-box;
 }
 
 body {
-    background-color: black;
+    @include background;
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    background: $primary-color;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    font-weight: 400;
+    color: #fff;
+
+    &.large-heading {
+        font-size: 6rem;
+    }
+    &.small-heading {
+        margin-bottom: 2rem;
+        padding: 0.2rem 1rem;
+        background: rgba(lighten($primary-color, 2), 0.5);
+    }
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+
+.text-secondary {
+    color: $secondary-color;
+}
+
+main {
+    &#home {
+       overflow: hidden;
+       margin-top: 20vh;
+    }
+
+    padding: 4rem;
+    height: 100%;
+
+    .icons {
+        margin-top: 1rem;
+        a {
+            padding: 0.3rem;
+
+            &:hover {
+                color: $secondary-color;
+                @include ease0ut;
+            }
+        }
+    }
 }
