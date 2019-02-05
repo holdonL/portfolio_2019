@@ -32,21 +32,136 @@
 .menu-button.close .menu-button--line:nth-child(1) {
   -webkit-transform: rotate(45deg) translate(5px, 5px);
           transform: rotate(45deg) translate(5px, 5px);
-  -webkit-transition: all ease-out 0.5s;
-  transition: all ease-out 0.5s;
 }
 
 .menu-button.close .menu-button--line:nth-child(2) {
   opacity: 0;
-  -webkit-transition: all ease-out 0.5s;
-  transition: all ease-out 0.5s;
 }
 
 .menu-button.close .menu-button--line:nth-child(3) {
   -webkit-transform: rotate(-45deg) translate(7px, -6px);
           transform: rotate(-45deg) translate(7px, -6px);
-  -webkit-transition: all ease-out 0.5s;
-  transition: all ease-out 0.5s;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 1;
+  visibility: hidden;
+}
+
+.menu.show {
+  visibility: visible;
+}
+
+.menu-branding, .menu-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  float: left;
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.menu-nav {
+  margin: 0;
+  padding: 0;
+  background: rgba(36, 36, 36, 0.493);
+  -webkit-transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0);
+  -webkit-transition: all ease-out 0.8s;
+  transition: all ease-out 0.8s;
+}
+
+.menu-nav.show {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.menu-branding {
+  background: rgba(49, 49, 49, 0.493);
+  -webkit-transform: translate3d(0, 100%, 0);
+          transform: translate3d(0, 100%, 0);
+  -webkit-transition: all ease-out 0.8s;
+  transition: all ease-out 0.8s;
+}
+
+.menu-branding.show {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.menu-branding .portrait {
+  width: 250px;
+  height: 250px;
+  background-image: url(../img/portrait.jpg);
+  border-radius: 50%;
+  border: solid 3px #e6e203;
+}
+
+.menu .menu-item {
+  -webkit-transform: translate3d(600px, 0, 0);
+          transform: translate3d(600px, 0, 0);
+  -webkit-transition: all ease-out 0.8s;
+  transition: all ease-out 0.8s;
+}
+
+.menu .menu-item.show {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.menu .menu-item--link {
+  display: inline-block;
+  position: relative;
+  padding: 1rem 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.7em;
+  -webkit-transition: all ease-out 0.8s;
+  transition: all ease-out 0.8s;
+  color: #fff;
+  font-weight: 400;
+}
+
+.menu .menu-item--link:hover {
+  color: #e6e203;
+}
+
+.menu .menu-item.current > a {
+  color: #e6e203;
+}
+
+.menu-item:nth-child(1) {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.menu-item:nth-child(2) {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.menu-item:nth-child(3) {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.menu-item:nth-child(4) {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
 }
 
 * {
