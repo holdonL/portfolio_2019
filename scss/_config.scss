@@ -1,5 +1,5 @@
 //Variables
-$primary-color: rgba(49, 49, 49, 0.5);
+$primary-color: rgb(49, 49, 49);
 $secondary-color: rgb(230, 226, 3);
 $primary-colorNO: rgb(49, 49, 49);
 $show-home-image: true;
@@ -10,6 +10,7 @@ $background-opacity: 0.9;
 @mixin ease0ut {
     transition: all ease-out 0.8s;
 }
+
 @mixin background {
     @if $show-home-image {
         &#bg-image {
