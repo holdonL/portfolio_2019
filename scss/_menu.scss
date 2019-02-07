@@ -6,6 +6,11 @@
     cursor: pointer;
     @include ease0ut;
 
+    &:hover .menu-button-line,
+    &:focus .menu-button-line {
+        background: $secondary-color;
+    }
+
     .menu-button-line {
         width: 28px;
         height: 3px;
@@ -23,6 +28,7 @@
     &.close {
         transform: rotate(180deg);
         transition: all ease-out 0.5s;
+        
 
         .menu-button-line {
             //Line 1
@@ -68,10 +74,10 @@
     &-nav {
         margin: 0;
         padding: 0;
-        background: darken($primary-colorNO, 5);
+        background: darken($primary-color, 4);
         transform: translate3d(0, -100%, 0);
         @include ease0ut;
-        opacity: $background-opacity;
+        opacity: 0.99;
 
         &.show {
             transform: translate3d(0, 0, 0);
@@ -79,10 +85,10 @@
     }
 
     &-branding {
-        background: darken($primary-colorNO, 2);
+        background: darken($primary-color, 3);
         transform: translate3d(0, 100%, 0);
         @include ease0ut;
-        opacity: $background-opacity;
+        opacity: 0.95;
 
         &.show {
             transform: translate3d(0, 0, 0);
@@ -116,7 +122,8 @@
             color: #fff;
             font-weight: 400;
 
-            &:hover {
+            &:hover,
+            &:focus {
                 color: $secondary-color;
             }
         }
